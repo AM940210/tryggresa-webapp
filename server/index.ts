@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db";
-import { connect } from "http2";
 
 dotenv.config();
 
@@ -20,4 +19,4 @@ app.get("/", (_req, res) => {
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
-})
+});
