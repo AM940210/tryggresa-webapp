@@ -1,7 +1,17 @@
-/* Global styling for TryggResa */
+@import "tailwindcss";
 
-body {
-  font-family: system-ui, sans-serif;
-  background-color: #f9fafb;
-  color: #111827;
+html, body {
+  @apply bg-white text-dark font-sans antialiased;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+
+h2 {
+  @apply text-xl font-semibold;
+}
+
+p {
+  @apply text-grayText;
 }
