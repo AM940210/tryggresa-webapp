@@ -1,22 +1,21 @@
-const { content } = require('./tailwind.config.cjs');
-
-/** @type {import('tailwindcss'.Config)} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        "./src/**/*.{js,ts,jsx,tsx}",
-    ],
-    theme: {
-        extends: {
-            colors: {
-                primary: "#0066CC",
-                primaryLight: "#E6F2FF",
-                dark: "#1A1A1A",
-                grayText: "#6B7280",
-            },
-            fontFamily: {
-                sans: ["Inter", "sans-serif"],
-            },
-        },
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        main: "#2563eb",
+        light: "#F8FAFC",
+        dark: "#1E293B",
+        grayText: "#6B7280",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
     },
-    plugins: [],
+  },
+  plugins: [],
 };
