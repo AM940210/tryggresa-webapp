@@ -50,7 +50,7 @@ export default function Header() {
                 
 
                 {/* MOBILE MENU BUTTON */}
-                <button className="md:hidden text-gray-700 text-2xl">
+                <button className="md:hidden text-gray-700 text-2xl pr-6">
                     ☰
                 </button>
 
