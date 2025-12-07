@@ -1,8 +1,12 @@
+import { useState } from "react";
 import logo from "../assets/logo.png";
-import { Search, User, Languages } from "lucide-react";
+import { Menu, X, Search, User, Languages, Home, CalendarCheck, HelpCircle } from "lucide-react";
 
 
 export default function Header() {
+
+    const [open, setOpen] = useState(false);
+
     return (
         <header className="w-full bg-white shadow-md">
             <nav className="max-w-6xl mx-auto flex items-center justify-between pt-1 ps-1 pb-4">
@@ -12,7 +16,7 @@ export default function Header() {
                     <img src={logo} alt="TryggResa logo" className="h-20 w-auto" />
                 </div>
 
-                {/* NAVIGATION LINKS */}
+                {/* DESKTOP MENY */}
                 <div className="hidden md:flex items-center gap-6 text-gray-700">
                     
                     {/* Vänster meny */}
@@ -47,14 +51,53 @@ export default function Header() {
                         </li>
                     </ul>
                 </div>
-                
 
                 {/* MOBILE MENU BUTTON */}
-                <button className="md:hidden text-gray-700 text-2xl pr-6">
-                    ☰
+                <button 
+                    className="md:hidden text-gray-700 text-2xl pr-6"
+                    onClick={() => setOpen(!open)}
+                >
+                    {open ? <X size={48} /> : <Menu size={48}/>}
                 </button>
-
             </nav>
+
+            {/* MOBILE DROPDOWN */}
+            {open && (
+                <div className="md:hidden bg-white shadow-md border-t">
+                    <ul className="items-center gap-2">
+                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
+                            <span className="pr-4 flex items-center">
+                                <Home size={40} />
+                            </span>
+                            Hem
+                        </li>
+                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
+                            <span className="pr-4 flex items-center">
+                                <Search size={40} />
+                            </span>
+                            Sök resa
+                        </li>
+                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
+                            <span className="pr-2 flex items-center">
+                                <User size={40}/>
+                            </span>
+                            Logga in / Registera dig
+                        </li>
+                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
+                            <span className="pr-2 flex items-center">
+                                <CalendarCheck size={40}/>
+                            </span>
+                            Mina Bokningar
+                        </li>
+                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
+                            <span className="pr-2 flex items-center">
+                                <HelpCircle size={40}/>
+                            </span>
+                            Hjälp
+                        </li>
+                    </ul>
+                </div>
+            )}
         </header>
     );
 }
