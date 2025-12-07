@@ -11,7 +11,7 @@ export default function LandingPage() {
                 </h1>
                 <p className="text-lg md:text-xl text-black mb-6">
                     För äldre och personer och personer med funktionsnedsättning
-boka din resa - snabbt och enkelt.
+                    boka din resa - snabbt och enkelt.
                 </p>
             </div>
             
