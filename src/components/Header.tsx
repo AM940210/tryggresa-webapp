@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
-import { Menu, X, Search, User, Languages, Home, CalendarCheck, HelpCircle } from "lucide-react";
+import { Menu, X, Search, User, Globe, Languages, Home, CalendarCheck, HelpCircle } from "lucide-react";
 
 
 export default function Header() {
@@ -78,22 +78,22 @@ export default function Header() {
                             Sök resa
                         </li>
                         <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
-                            <span className="pr-2 flex items-center">
+                            <span className="pr-4 flex items-center">
                                 <User size={40}/>
                             </span>
                             Logga in / Registera dig
                         </li>
-                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
-                            <span className="pr-2 flex items-center">
-                                <CalendarCheck size={40}/>
-                            </span>
-                            Mina Bokningar
-                        </li>
-                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-0.5 hover:border hover:border-blue-600 transition">
-                            <span className="pr-2 flex items-center">
+                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium mb-2 hover:border hover:border-blue-600 transition">
+                            <span className="pr-4 flex items-center">
                                 <HelpCircle size={40}/>
                             </span>
                             Hjälp
+                        </li>
+                        <li className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-2xl font-medium hover:border hover:border-blue-600 transition">
+                            <span className="pr-4 flex items-center">
+                                <Globe size={40}/>
+                            </span>
+                            Switch to English
                         </li>
                     </ul>
                 </div>
