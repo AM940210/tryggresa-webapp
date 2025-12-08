@@ -1,6 +1,12 @@
+import Header from "./components/Header";
 import LandingPage from "./pages/LandingsPage";
 
 export default function App() {
-  return <LandingPage />;
+  return (
+    <div>
+      <Header />
+      <LandingPage />
+    </div>
+  );
 }
 
