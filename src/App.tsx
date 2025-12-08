@@ -1,14 +1,12 @@
-import React from 'react'
+import Header from "./components/Header";
+import LandingPage from "./pages/LandingsPage";
 
-export default function App(): React.ReactElement {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
-      <header className="p-6 border-b bg-white">
-        <h1 className="text-xl font-semibold">Tryggresa</h1>
-      </header>
-      <main className="p-6">
-        <p>Welcome — the app root is working.</p>
-      </main>
+    <div>
+      <Header />
+      <LandingPage />
     </div>
-  )
+  );
 }
+
