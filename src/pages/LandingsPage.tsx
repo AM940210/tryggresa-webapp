@@ -5,7 +5,7 @@ export default function LandingPage() {
         <section className="relative w-full h-[500px] md:h-[600px] white">
             
             {/* Text ovanpå bilden */}
-            <div className="text-center py-8 px-4">
+            <div className="text-center py-4 px-4">
                 <h1 className="text-xl md:text-5xl font-bold text-black mb-1">
                     Enkel och trygg bokning av färdtjänst & sjukresor
                 </h1>
